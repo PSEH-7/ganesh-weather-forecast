@@ -1,17 +1,20 @@
-  @Library('julesGlobalLibrary@master')_
-
-
-
-    buildPipeLine()
-
-
-
-    def buildPipeLine(){
-
-    jules_pipelineRunner{
-
-    yml = "jules-menifest.yml"
-
-  }
-
-  }
+    pipeline {
+        agent any
+            stages {
+            stage('Build') {
+            steps {
+                sh 'mvn -B -DskipTests clean package'
+            }
+            }
+            stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+            }
+            stage('Deploy') {
+            steps {
+            //
+            }
+            }
+        }
+    }
