@@ -1,0 +1,57 @@
+
+package com.sapient.weatherforecast.pojo;
+
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+    "3h"
+})
+public class Snow implements Serializable
+{
+
+    @JsonProperty("3h")
+    private Double _3h;
+    @JsonIgnore
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private final static long serialVersionUID = -3555937923182619101L;
+
+    @JsonProperty("3h")
+    public Double get3h() {
+        return _3h;
+    }
+
+    @JsonProperty("3h")
+    public void set3h(Double _3h) {
+        this._3h = _3h;
+    }
+
+    public Snow with3h(Double _3h) {
+        this._3h = _3h;
+        return this;
+    }
+
+    @JsonAnyGetter
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
+    }
+
+    @JsonAnySetter
+    public void setAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
+    }
+
+    public Snow withAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
+        return this;
+    }
+
+}
