@@ -5,7 +5,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 //@Configuration
 //@EnableSwagger2
 public class SwaggerConfig extends WebMvcConfigurationSupport {
-	@Bean
+/*	@Bean
 	public Docket api() {                
 	    return new Docket(DocumentationType.SWAGGER_2)          
 	      .select()
@@ -30,5 +30,5 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
                 .addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**")
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
-    }
+    }*/
 }

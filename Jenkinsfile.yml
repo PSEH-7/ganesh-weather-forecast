@@ -1,0 +1,17 @@
+  @Library('julesGlobalLibrary@master')_
+
+
+
+    buildPipeLine()
+
+
+
+    def buildPipeLine(){
+
+    jules_pipelineRunner{
+
+    yml = "jules-menifest.yml"
+
+  }
+
+  }
